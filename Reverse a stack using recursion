@@ -1,0 +1,20 @@
+
+from typing import List
+
+class Solution:
+    def reverseInsert(self, St, element):
+        if not St:
+            St.append(element)
+        else:
+            temp = St.pop()
+            self.reverseInsert(St,element)
+            st.append(temp)
+    def reverse(self,St): 
+        #code here
+        if not St:
+            return
+        temp = St.pop()
+        self.reverse(St)
+        self.reverseInsert(St, temp)
+        
+
