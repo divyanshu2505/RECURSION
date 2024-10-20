@@ -1,0 +1,21 @@
+class Solution:
+    # your task is to complete this function
+    # function sort the stack such that top element is max
+    # funciton should return nothing
+    # s is a stack
+    def sortedInsert(self,s,element):
+        if len(s)== 0 or s[-1] <= element:
+            s.append(element)
+            
+        else: 
+            temp= s.pop()
+            self.sortedInsert(s, element)
+            s.append(temp)
+            
+    def Sorted(self, s):
+        # Code here
+        if len(s)== 0:
+            return 
+        temp = s.pop()
+        self.Sorted(s)
+        self.sortedInsert(s,temp)
